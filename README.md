@@ -73,8 +73,8 @@ Build i.MX with docker
 ├── README.md
 ├── docker-build.sh
 ├── docker-run.sh
-├── env.sh -> imx-6.6.52-2.2.0/env.sh
-└── imx-6.6.52-2.2.0
+├── env.sh -> imx-6.12.20-2.0.0/env.sh
+└── imx-6.12.20-2.0.0
     ├── env.sh
     └── yocto-build.sh
 ```
@@ -97,14 +97,6 @@ to the operating system, for example the Dockerfile for Ubuntu version 22.04:
 
 Build the yocto imx-image in a docker container
 -----------------------------------------------
-
-```{.sh}
-  $ ./docker-run.sh ${IMX_RELEASE}/yocto-build.sh
-
-  i.e IMX_RELEASE=imx-6.6.52-2.2.0
-```
-
-or just go to the docker container prompt (and run the build script from there):
 
 ```{.sh}
   $ ./docker-run.sh
