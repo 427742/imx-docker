@@ -1,0 +1,19 @@
+FROM d3566aec418a
+
+
+RUN usermod --uid 110 _apt
+
+# Set the arguments for host_id and user_id to be able to save the build artifacts
+#
+# outside the container, on host directories, as docker volumes.
+ARG USER \
+    host_uid \
+    host_gid
+
+RUN useradd -g $host_gid -m -s /bin/bash -u $host_uid $USER
+
+# Yocto builds should run as a normal user.
+USER $USER
+
+ARG DOCKER_WORKDIR
+WORKDIR ${DOCKER_WORKDIR}

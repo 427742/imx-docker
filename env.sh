@@ -1,1 +1,2 @@
-imx-6.12.20-2.0.0/env.sh
+rte_la93xx/env.sh
+
